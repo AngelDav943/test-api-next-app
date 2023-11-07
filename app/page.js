@@ -17,9 +17,9 @@ export default async function Home() {
   const catalog = await getData()
 
   return (
-  <main>
+  <main className={styles.main}>
     {catalog.products.map(product => (
-      <div>
+      <div className={styles.product}>
         <img height="100" src={product.thumbnail}/>
         <p>{product.title}</p>
       </div>

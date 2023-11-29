@@ -1,3 +1,10 @@
+//'use client';
+import style from './page.module.css'
+import Image from 'next/image'
+
+import left from '../../public/images/left.svg'
+import right from '../../public/images/right.svg'
+
 async function getProductData(id) {
     const res = await fetch('https://dummyjson.com/products/'+id)
 
@@ -12,21 +19,26 @@ async function getProductData(id) {
 export default async function Page({ params, searchParams }) {
     //return <div>ID: {params.id}</div>
     const product = await getProductData(params.id)
-    console.log(params.id)
-    console.log(product)
+    //console.log(params.id)
 
-    /*
-    return <div>
-        <p>{params.id}</p>
-        <p>{product}</p>
-    </div>
-    //*/
+    //'use client';
+    function handleClick(mov)
+    {
+      console.log(mov)
+    }
+
 
     return (
     <main>
         <div>
-            <img height="100" src={product.thumbnail}/>
+            <div className={style.carousel}>
+              { product.images.map(image => (<img src={image}/>)) }
+            </div>
+
             <p>{product.title}</p>
+            <p>{product.price}$</p>
+            <span>{product.stock} left</span>
+            <p>{product.description}</p>
         </div>
     </main>
     )

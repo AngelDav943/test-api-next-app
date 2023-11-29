@@ -12,6 +12,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <nav>
+          <span>LOGO</span>
+          <a href="#">Home</a>
+          <a href="#">A</a>
+          <a href="#">B</a>
+          <a href="#">C</a>
+        </nav>
         {children}
       </body>
     </html>

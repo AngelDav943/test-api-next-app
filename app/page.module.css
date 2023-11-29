@@ -1,10 +1,30 @@
 .main {
-  display: flex;
+  /*display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-around;*/
 }
 
 .product {
   padding: 1em;
-  width: 15em;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  text-decoration: none;
+}
+
+.product .info {
+  text-align: right;
+}
+
+.info * {
+  display: block;
+}
+
+.info .title {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.product img {
+  object-fit: cover;
 }

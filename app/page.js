@@ -17,13 +17,21 @@ export default async function Home() {
   const catalog = await getData()
 
   return (
-  <main className={styles.main}>
-    {catalog.products.map(product => (
-      <div className={styles.product}>
-        <img height="100" src={product.thumbnail}/>
-        <p>{product.title}</p>
-      </div>
-    ))}
-  </main>
+  <>
+    <aside>
+
+    </aside>
+    <main className={styles.main}>
+      {catalog.products.map(product => (
+        <a className={styles.product} href={product.id}>
+          <img height="100" src={product.thumbnail}/>
+          <div className={styles.info}>
+            <span className={styles.title}>{product.title}</span>
+            <span className={styles.price}>{product.price}$</span>
+          </div>
+        </a>
+      ))}
+    </main>
+  </>
   )
 }

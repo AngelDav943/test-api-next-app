@@ -30,16 +30,18 @@ export default async function Page({ params, searchParams }) {
 
     return (
     <main>
-        <div>
+        <section className={style.top}>
             <div className={style.carousel}>
               { product.images.map(image => (<img src={image}/>)) }
             </div>
 
-            <p>{product.title}</p>
-            <p>{product.price}$</p>
-            <span>{product.stock} left</span>
-            <p>{product.description}</p>
-        </div>
+            <div className={style.info}>
+              <p className={style.title}>{product.title}</p>
+              <p className={style.price}>{product.price}$</p>
+              <span>{product.stock} left</span>
+            </div>
+        </section>
+        <p>{product.description}</p>
     </main>
     )
 }

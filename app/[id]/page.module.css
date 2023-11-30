@@ -1,21 +1,22 @@
 .top {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bolder;
 }
 
 .info {
-    width: 100%;
-    text-align: right;
+
 }
 
-.carousel {
-    height: 400px;
-    overflow: scroll;
-    overflow-y: hidden;
-
-    display: flex;
-    flex-direction: row;
+.info .price {
+    font-size: 1.5em;
+    font-weight: 200;
 }
 
-.carousel img {
-    height: 100%;
+.price {
+
 }

@@ -5,11 +5,16 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: #ededed;
 }
 
 main {
+  border-radius: 0.5em;
+  border: 1px solid #0000001a;
+
+  background-color: white;
   margin: auto;
-  width: calc(100vw - 10px);
+  max-width: 900px;
 }
 
 nav {
@@ -23,6 +28,9 @@ nav {
   padding: 0px 2em;
 
   color: white;
+
+  position: sticky;
+  top: 0;
 }
 
 nav span {

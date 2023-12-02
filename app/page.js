@@ -1,6 +1,8 @@
 //'use client';
 import Image from 'next/image'
-import styles from './page.module.css'
+import './home.css'
+
+import Item from '../components/Item'
 
 async function getData() {
   const res = await fetch('https://dummyjson.com/products')
@@ -18,18 +20,12 @@ export default async function Home() {
 
   return (
   <>
-    <aside>
+    <main>
+      <aside>
 
-    </aside>
-    <main className={styles.main}>
+      </aside>
       {catalog.products.map(product => (
-        <a className={styles.product} href={product.id}>
-          <img height="100" src={product.thumbnail}/>
-          <div className={styles.info}>
-            <span className={styles.title}>{product.title}</span>
-            <span className={styles.price}>{product.price}$</span>
-          </div>
-        </a>
+        <Item {...product}/>
       ))}
     </main>
   </>

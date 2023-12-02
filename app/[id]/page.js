@@ -2,6 +2,7 @@ import style from './page.module.css'
 import Image from 'next/image'
 
 import Gallery from '../../components/Gallery'
+import Stars from '../../components/Stars'
 
 async function getProductData(id) {
     const res = await fetch('https://dummyjson.com/products/'+id)
@@ -17,16 +18,7 @@ async function getProductData(id) {
 export default async function Page({ params, searchParams }) {
     //return <div>ID: {params.id}</div>
     const product = await getProductData(params.id)
-    //console.log(params.id)
-
-    var currentImage = 0
-
-    //'use client';
-    function handleClick(mov)
-    {
-      console.log(mov)
-    }
-
+    //console.log(product)
 
     return (
     <main>
@@ -38,6 +30,7 @@ export default async function Page({ params, searchParams }) {
             <div className={style.info}>
               <p className={style.price}>$ {product.price}</p>
               <span>{product.stock} left</span>
+              <Stars rating={product.rating}/>
             </div>
         </section>
         <p>{product.description}</p>

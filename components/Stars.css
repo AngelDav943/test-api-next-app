@@ -1,0 +1,17 @@
+.stars {
+    display: flex;
+    align-items: center;
+}
+
+.stars span {
+    margin-left: 0.3em;
+}
+
+.star {
+    height: 1.2em;
+    filter: grayscale(1);
+}
+
+.star.check {
+    filter: none;
+}

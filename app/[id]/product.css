@@ -3,12 +3,17 @@
     flex-wrap: wrap;
 }
 
+.top > .title {
+    display: none;
+}
+
 .title {
     font-size: 2em;
     font-weight: bolder;
 }
 
 .info {
+    width: 300px;
     padding: 2em;
 }
 
@@ -19,4 +24,14 @@
 
 .price {
 
+}
+
+@media screen and (max-width:calc(900px)) {
+    .top > .title {
+        display: block;
+    }
+
+    .info > .title {
+        display: none;
+    }
 }

@@ -1,4 +1,4 @@
-import style from './page.module.css'
+import './product.css'
 import Image from 'next/image'
 
 import Gallery from '../../components/Gallery'
@@ -16,19 +16,16 @@ async function getProductData(id) {
   }
 
 export default async function Page({ params, searchParams }) {
-    //return <div>ID: {params.id}</div>
     const product = await getProductData(params.id)
-    //console.log(product)
 
     return (
     <main>
-        <section className={style.top}>
-            <div>
-              <p className={style.title}>{product.title}</p>
-              <Gallery images={product.images}/>
-            </div>
-            <div className={style.info}>
-              <p className={style.price}>$ {product.price}</p>
+        <section className="top">
+            <p className="title">{product.title}</p>
+            <Gallery images={product.images}/>
+            <div className="info">
+              <p className="title">{product.title}</p>
+              <p className="price">$ {product.price}</p>
               <span>{product.stock} left</span>
               <Stars rating={product.rating}/>
             </div>

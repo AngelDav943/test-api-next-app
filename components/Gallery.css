@@ -3,7 +3,6 @@
     width: 500px;
     display: flex;
     overflow: hidden;
-
 }
 
 .gallery .preview {
@@ -35,7 +34,6 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-
 }
 
 .preview .image:hover {
@@ -51,20 +49,20 @@
     background: #808080;
 }
 
+@media screen and (max-width:calc(900px)) {
+    .gallery {
+        margin: auto;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
 
-/* aaa */
+    .gallery .main {
+        width: 100%;
+        height: calc(100% - 5em);
+    }
 
-/*
-::-webkit-scrollbar {
-    width: 20px;
+    .gallery .preview {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
 }
-
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-
-}
-*/

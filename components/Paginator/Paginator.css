@@ -1,0 +1,21 @@
+.paginator {
+    width: 100%;
+    text-align: center;
+}
+
+.paginator a {
+    text-decoration: none;
+    padding: 0.3em 0.6em;
+
+    color: black;
+
+    background-color: #0000001a;
+}
+
+.paginator a:hover {
+    background-color: #8080804f;
+}
+
+.paginator a.selected {
+    background-color: orange;
+}

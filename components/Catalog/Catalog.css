@@ -1,0 +1,22 @@
+main {
+    display: flex;
+}
+
+aside {
+    width: 300px;
+}
+
+aside a {
+    display: block;
+    text-decoration: none;
+    padding: 0.25em;
+    color: rebeccapurple;
+}
+
+aside a:hover {
+    background-color: #8080801c;
+}
+
+main section {
+    width: 100%;
+}

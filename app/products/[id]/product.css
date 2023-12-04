@@ -1,15 +1,25 @@
 .top {
+    padding: 1em;
+
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: -2em;
+    max-width: 900px;
+}
+
+article {
     display: flex;
     flex-wrap: wrap;
 }
 
-.top > .title {
+article > .title {
     display: none;
 }
 
 .title {
     font-size: 2em;
     font-weight: bolder;
+    margin: 0;
 }
 
 .info {
@@ -23,11 +33,15 @@
 }
 
 .price {
+    margin: 0;
+}
 
+span.discount {
+    margin-bottom: 0.5em;
 }
 
 @media screen and (max-width:calc(900px)) {
-    .top > .title {
+    article > .title {
         display: block;
     }
 

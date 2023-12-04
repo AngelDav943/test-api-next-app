@@ -1,0 +1,10 @@
+span.discount {
+    font-size: 0.9em;
+    display: inline;
+    background-color: red;
+    width: fit-content;
+    color: white;
+    padding: 0.2em;
+    border-radius: 1em;
+    margin-right:0.5em;
+}

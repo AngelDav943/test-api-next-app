@@ -10,16 +10,20 @@ body {
 
 main {
   padding: 1em;
-  /*border-radius: 0.5em;*/
+  
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  
   border: 1px solid #0000001a;
   border-top: none;
   border-bottom: none;
-
+  
   background-color: white;
   margin: auto;
+  margin-top: 2em;
 
   max-width: 900px;
-  min-height: calc(100vh - 5em);
+  min-height: calc(100vh - 7em);
 }
 
 nav {
@@ -44,6 +48,22 @@ nav a {
   padding: 1em;
 }
 
+nav input.search {
+  background-color: #0000001a;
+  color: white;
+
+  padding: 0.5em;
+  border: none;
+  outline: none;
+
+  min-width: 700px;
+}
+
 nav a:hover {
   background-color: #8080801c;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #0000001a;
 }

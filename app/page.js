@@ -1,11 +1,10 @@
 //'use client';
 import Image from 'next/image'
-import './home.css'
 
-import Item from '../components/Item'
+import Catalog from '../components/Catalog/Catalog'
 
-async function getData() {
-  const res = await fetch('https://dummyjson.com/products')
+async function getData(link) {
+  const res = await fetch(link)
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
@@ -15,19 +14,11 @@ async function getData() {
   return res.json()
 }
 
-export default async function Home() {
-  const catalog = await getData()
+export default async function () {
+  const catalog = await getData('https://dummyjson.com/products?limit=10')
 
-  return (
-  <>
-    <main>
-      <aside>
-
-      </aside>
-      {catalog.products.map(product => (
-        <Item {...product}/>
-      ))}
-    </main>
-  </>
-  )
+  return <Catalog
+    catalog={catalog}
+    currentPage={1}
+  />
 }

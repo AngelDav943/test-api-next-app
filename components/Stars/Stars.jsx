@@ -1,5 +1,5 @@
 'use client'
-import star from '../public/images/star.png'
+import star from '../../public/images/star.png'
 
 import './Stars.css'
 

@@ -24,7 +24,7 @@ export default async function Page({ params, searchParams }) {
       <span>
         <a href='/'>Home</a>
         {'>'}
-        <a href=''>{product.category}</a>
+        <a href={'/category/'+product.category}>{product.category}</a>
       </span>
     </div>
     <main>

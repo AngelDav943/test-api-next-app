@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-import left from '../public/images/left.svg'
-import right from '../public/images/right.svg'
+//import left from '../../public/images/left.svg'
+//import right from '../../public/images/right.svg'
 
 import './Gallery.css'
 

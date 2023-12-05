@@ -5,7 +5,7 @@ import Discount from '../Discount/Discount'
 
 export default function(props) {
     return (
-        <a className="product" href={"products/"+props.id}>
+        <a className="product" href={"/products/"+props.id}>
             <img height="100" src={props.thumbnail}/>
             <div className="info">
                 <p className="title">

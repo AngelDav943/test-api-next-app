@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <nav>
           <span>LOGO</span>
-          <input type='text' className='search' placeholder='Search here'/>
+          {/* <input type='text' className='search' placeholder='Search here'/> */}
           <a href="/">Home</a>
         </nav>
         {children}
